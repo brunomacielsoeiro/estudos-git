@@ -44,6 +44,8 @@ Incluindo:
 ---
 
 ## Organização do repositório
+```text
 estudos-git/
 ├── README.md
-├── comandos-git.md
+└── comandos-git.md
+
