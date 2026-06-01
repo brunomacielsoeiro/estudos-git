@@ -1,51 +1,101 @@
-# Estudos de Git e GitHub
+# 📚 Estudos de Git e GitHub
 
-## Sobre o projeto
-Este repositório foi criado com o objetivo de aprofundar os estudos sobre Git e GitHub,
-abordando desde conceitos básicos até práticas intermediárias de controle de versão,
-organização de projetos e versionamento de código.
-
-Projeto desenvolvido como atividade acadêmica para cumprimento de horas complementares.
+> Projeto de estudos sobre controle de versão com Git e GitHub, abordando desde conceitos fundamentais até fluxos de trabalho colaborativos e boas práticas de versionamento. Atividade acadêmica para cumprimento de horas complementares.
 
 ---
 
-## Objetivos de Aprendizado
-- Compreender o funcionamento do Git como sistema de controle de versão
-- Utilizar comandos básicos e intermediários do Git
-- Entender a diferença entre Git e GitHub
-- Criar e versionar repositórios de forma organizada
-- Registrar histórico de mudanças por meio de commits
+## 📋 Índice
+
+- [Sobre o Projeto](#sobre-o-projeto)
+- [O que você vai aprender](#o-que-você-vai-aprender)
+- [Estrutura do Repositório](#estrutura-do-repositório)
+- [Fluxo de Trabalho Git](#fluxo-de-trabalho-git)
+- [Conexão com outros projetos](#conexão-com-outros-projetos)
+- [Referências](#referências)
 
 ---
 
-## Conteúdo abordado
+## Sobre o Projeto
 
-### Fundamentos de Git
-- O que é controle de versão
-- Repositórios locais e remotos
-- Ciclo de vida dos arquivos no Git
+Git é o sistema de controle de versão mais utilizado no mundo. Este repositório documenta os fundamentos necessários para trabalhar com Git e GitHub de forma profissional — desde o primeiro commit até estratégias de branching em equipe.
 
-### Principais comandos
-Os comandos básicos estudados estão documentados no arquivo:
-- `comandos-git.md`
+### Por que Git é essencial?
 
-Incluindo:
-- git clone
-- git status
-- git add
-- git commit
-- git push
-- git pull
-
-### Git x GitHub
-- Git como ferramenta de versionamento local
-- GitHub como plataforma de hospedagem e colaboração de código
+- Todo projeto de software usa controle de versão
+- É pré-requisito para CI/CD, DevOps e colaboração em equipe
+- Permite rastrear mudanças, reverter erros e trabalhar em paralelo
+- GitHub é a principal plataforma de portfólio para desenvolvedores
 
 ---
 
-## Organização do repositório
-```text
+## O que você vai aprender
+
+| Tema | Arquivo | Descrição |
+|------|---------|-----------|
+| Comandos Git | [comandos-git.md](./comandos-git.md) | Referência completa de comandos com exemplos |
+| Conceitos | [conceitos-git.md](./conceitos-git.md) | Repositórios, staging, commits, branches |
+| Fluxos de Trabalho | [fluxos-trabalho.md](./fluxos-trabalho.md) | Git Flow, GitHub Flow, trunk-based |
+| Boas Práticas | [boas-praticas.md](./boas-praticas.md) | Commits, branches, PRs, .gitignore |
+
+---
+
+## Estrutura do Repositório
+
+```
 estudos-git/
-├── README.md
-└── comandos-git.md
+├── README.md              ← Este arquivo (visão geral)
+├── comandos-git.md        ← Referência de comandos com exemplos
+├── conceitos-git.md       ← Fundamentos teóricos
+├── fluxos-trabalho.md     ← Estratégias de branching
+└── boas-praticas.md       ← Padrões profissionais
+```
 
+---
+
+## Fluxo de Trabalho Git
+
+```
+┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+│  Working     │     │   Staging    │     │    Local     │     │   Remote     │
+│  Directory   │────►│    Area      │────►│  Repository  │────►│  Repository  │
+│              │ add │   (Index)    │commit│   (.git)     │push │  (GitHub)    │
+└──────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
+       ▲                                                              │
+       └──────────────────────────────────────────────────────────────┘
+                                    pull / clone
+```
+
+### Ciclo de vida dos arquivos
+
+```
+Untracked → Staged → Committed → Modified → Staged → Committed → ...
+    │          │          │           │
+    └── git add ┘    git commit      edit
+```
+
+---
+
+## Conexão com outros projetos
+
+Git é a base de tudo:
+
+- **DevOps** — CI/CD depende de Git (push triggers pipeline)
+- **Terraform** — Versionamento de infraestrutura
+- **CloudFormation** — Templates versionados em repositórios
+- **Docker** — Dockerfile versionado, builds automatizados
+- **Kubernetes** — GitOps (ArgoCD, Flux)
+
+---
+
+## Referências
+
+- [Git Documentation](https://git-scm.com/doc)
+- [GitHub Docs](https://docs.github.com/)
+- [Pro Git Book (gratuito)](https://git-scm.com/book/pt-br/v2)
+- [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
+---
+
+## 📄 Licença
+
+MIT License
